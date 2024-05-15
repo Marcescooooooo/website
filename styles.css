@@ -1,0 +1,271 @@
+body {
+    font-family: 'Arial', 'Playfair Display', sans-serif; /* Agregamos 'Playfair Display' como fuente secundaria */
+    margin: 0;
+    padding: 0;
+    background-color: #f9e1e1; /* Cambiamos el color de fondo principal a un tono suave de rosa */
+    color: #7d5a5a; /* Cambiamos el color de texto principal a un tono más oscuro de rosa */
+}
+
+header {
+    background: #fff; /* Fondo blanco */
+    color: #7d5a5a; /* Color de texto principal */
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Borde inferior del encabezado */
+}
+
+header .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background: #fff; /* Fondo blanco */
+    color: #333; /* Color de texto principal */
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #ddd; /* Borde superior del pie de página */
+}
+
+/* Estilos específicos para la página principal */
+
+.banner {
+    position: relative;
+    height: 60vh; /* Altura del banner */
+    overflow: hidden; /* Ocultar el desbordamiento */
+}
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajustar el video al tamaño del contenedor */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* Color de texto en el banner */
+}
+
+
+.banner-text h2 {
+    font-size: 3rem; /* Tamaño del título */
+    margin-bottom: 1rem;
+}
+
+.banner-text p {
+    font-size: 1.25rem; /* Tamaño del texto */
+}
+
+/* Estilos específicos para las secciones de contenido */
+
+
+.about {
+    padding: 4rem 2rem; /* Espaciado interno */
+    background: #fff; /* Fondo blanco */
+    text-align: center;
+}
+
+
+.about h2 {
+    font-size: 2.5rem; /* Tamaño del título */
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.1rem; /* Tamaño del texto */
+    max-width: 800px; /* Ancho máximo del texto */
+    margin: 0 auto; /* Centrar el texto */
+}
+
+
+/* Estilos para la subpágina de Cadenas y Collares */
+
+.product-list {
+    padding: 4rem 2rem; /* Espaciado interno */
+    background: #fff; /* Fondo blanco */
+    text-align: center;
+}
+
+.product-list h2 {
+    font-size: 2.2rem; /* Tamaño del título */
+    margin-bottom: 2rem; /* Espaciado inferior */
+    color: #555; /* Color más suave */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Distribución de las columnas */
+    gap: 2rem; /* Espaciado entre los elementos */
+    justify-items: center; /* Centrar horizontalmente los elementos */
+}
+
+.product-grid .product {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-grid .product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-grid .product:hover {
+    transform: translateY(-5px);
+}
+
+.product-grid .product:hover img {
+    transform: scale(1.1);
+}
+
+.product-grid .product .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-grid .product:hover .overlay {
+    opacity: 1;
+}
+
+/* Estilos para el formulario de registro */
+
+.register-form {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 4rem auto; /* Centrar el formulario */
+    padding: 2rem;
+    background: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.register-form h2 {
+    font-size: 2.2rem; /* Tamaño del título */
+    margin-bottom: 1rem; /* Espaciado inferior */
+    color: #555; /* Color más suave */
+    text-align: center; /* Alinear al centro */
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555; /* Color más suave */
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form select {
+    width: 100%; /* Ancho completo */
+    padding: 0.75rem; /* Espaciado interno */
+    margin-bottom: 1rem; /* Espaciado inferior */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 4px; /* Borde redondeado */
+}
+
+.register-form button {
+    width: 100%; /* Ancho completo */
+    padding: 0.75rem;
+    background: #555; /* Fondo oscuro */
+    color: #fff; /* Color de texto claro */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background 0.3s; /* Transición de color de fondo */
+}
+
+.register-form button:hover {
+    background: #777; /* Fondo más oscuro al pasar el mouse */
+}
+
+
+
+/* Estilos para la sección de productos */
+
+
+    .products {
+        padding: 1rem 1rem; /* Espaciado interno */
+        background: #f8f8f8; /* Fondo gris claro */
+        text-align: center;
+    }
+
+    .products h2 {
+        font-size: 2.5rem; /* Tamaño del título */
+        margin-bottom: 1rem; /* Espaciado inferior */
+    }
+    
+    .product-carousel {
+        display: flex;
+        overflow-x: auto; /* Desplazamiento horizontal */
+        gap: 2rem; /* Espaciado entre los productos */
+        padding: 1rem 0; /* Espaciado interno */
+        justify-content: center; /* Centrar los productos */
+        align-items: center; /* Alinear verticalmente los productos */
+        scroll-snap-type: x mandatory; /* Desplazamiento suave */
+    }
+    
+    .product {
+        flex: 0 0 auto; /* Tamaño automático */
+        min-width: 10px; /* Ancho mínimo */
+        padding: 1rem; /* Espaciado interno */
+        background: #fff; /* Fondo blanco */
+        border-radius: 8px; /* Borde redondeado */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+        scroll-snap-align: start; /* Alinear al inicio del contenedor */
+        text-align: left; /* Alinear el texto a la izquierda */
+        transition: transform 0.5s ease; /* Transición de la transformación */
+    }
+    
+    .product img {
+        max-width: 50%; /* Ancho máximo de la imagen */
+        height: auto; /* Altura automática para mantener la proporción */
+        border-radius: 4px; /* Borde redondeado */
+    }
+    
+    .product:hover {
+        transform: translateY(-10px); /* Desplazamiento hacia arriba al pasar el mouse */
+    }
